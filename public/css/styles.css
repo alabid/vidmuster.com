@@ -16,3 +16,14 @@ footer p {
     text-align: center;
 }
 
+ul {
+    list-style-type : none;
+}
+
+.playing {
+    background: #111111;
+}
+
+.paused {
+    background: #ffaaaa;
+}
