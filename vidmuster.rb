@@ -1,8 +1,6 @@
 #! /usr/bin/env ruby
 require 'sinatra/base'
 require 'googleajax'
-require 'yaml'
-require 'pp'
 
 # Main file for vidmuster.com; handles all routes
 
