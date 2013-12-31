@@ -106,8 +106,13 @@ yt.www.suggest.handleResponse = function(suggestions){
     getTopSearchResult(searchTerm);
     $scope.currentSuggestion = searchTerm;
 
-    // update #news-search-trunk here
-    // with "searchTerm" here
+    $.ajax({
+        type: "GET",
+        url: "/google/"+encodeURIComponent(searchTerm),
+        success: function(responseData,textStatus,XMLHttpRequest){
+            $("#news-search-trunk").html(responseData);
+        }
+    });
 }; 
 
 function _run() {       
@@ -386,11 +391,12 @@ String.prototype.toTitleCase = function() {
     );
 };
 
-var myapp = angular.module('myapp', []);
-    
-myapp.config(function($compileProvider){
-    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/);
-});
+function liLoadAndPlayVideo(elem) {
+    var a = $(elem).find("a");
+    loadAndPlayVideo(a.attr("video-id"), parseInt(a.attr("index")));
+    return false;
+}
+
 
 $(document).ready(function() {
     $scope = angular.element(document).scope();

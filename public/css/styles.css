@@ -1,3 +1,7 @@
+body {
+    background-color: #eeeeee;
+}
+
 .container {
     margin-top: 20px;
 }
@@ -25,5 +29,10 @@ ul {
 }
 
 .paused {
-    background: #ffaaaa;
+    background: #999999;
+}
+
+ul#videos-search-trunk li {
+    cursor:pointer;
+    cursor:hand;
 }

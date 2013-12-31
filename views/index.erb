@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp" lang="en">
+<html ng-app lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Vidmuster >> Get more information about your favorite videos</title>
@@ -29,14 +29,13 @@
             <div id="current-video">
             </div>
             <div id="news-search-trunk">
-              This is where you put news.
             </div>
           </div>
           
           <div class="span3">
             <ul id="videos-search-trunk">
-              <li id="play-{{$index}}" ng-repeat="video in videos">
-                <a ng-href="javascript:loadAndPlayVideo('{{video.id}}', {{$index}})">
+              <li onclick="liLoadAndPlayVideo(this)" id="play-{{$index}}" ng-repeat="video in videos">
+                <a video-id="{{video.id}}" index="{{$index}}">
                   <img ng-src="{{video.thumbnail.sqDefault}}" />
                   <p>{{video.title}}</p>
                 </a>
