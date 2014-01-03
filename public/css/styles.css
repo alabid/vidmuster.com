@@ -36,3 +36,43 @@ ul#videos-search-trunk li {
     cursor:pointer;
     cursor:hand;
 }
+
+#current-suggestion {
+    font-family: 'The Girl Next Door', cursive;
+    font-size: 22px;
+}
+
+.search-query {
+    width: 340px !important;
+    height: 30px !important;
+    font-size: 20px !important;
+    margin-right: 15px !important;
+    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    border: 2px solid #999 !important;
+    padding: 0 5px 0 4px !important;
+}
+
+button[type="submit"] {
+    height: 30px !important;
+}
+
+#news-search-trunk {
+    border: 2px solid #999;
+    padding: 5px 5px 5px 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#news-search-trunk > p {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
